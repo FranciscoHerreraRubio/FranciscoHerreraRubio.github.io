@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.logo {
+    width: 90px;
+    height: 70px;
+}
+
+.header-text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.header-text p {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 60px;
+}
+
+/* Estilos para la página de proyectos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.project-card {
+    background-color: #aaa;
+    border-radius: 10px;
+    height: 300px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000; /* Make sure footer is on top */
+}
+
+footer nav a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.titulo-text {
+    width: 55%;
+    margin: 20px;
+}
+
+.titulo-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.titulo-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
