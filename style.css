@@ -188,25 +188,6 @@ footer nav a {
     
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-    z-index: 1000; 
-}
-
-footer nav a {
-    text-decoration: none;
-    color: #333;
-    margin: 0 20px;
-    font-weight: bold;
-    font-size: 0.8rem;
-}
 .titulo-text {
     width: 55%;
     margin: 20px;
@@ -218,6 +199,8 @@ footer nav a {
     font-size: 1.5rem;
     margin-bottom: 20px;
     font-family: "Kanit", sans-serif;
+    font-weight: 700;
+
 
 }
 
@@ -237,15 +220,27 @@ footer nav a {
     font-family: "Kanit", sans-serif;
 }
 
-.contacto-text {
+.contacto-text-p {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    height: 370px;
+    width: 50%;
+    height: 150px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+
+}
+.contacto-text h2 {
+    font-size: 1.5rem;
+    margin: 20px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+
+
+
 }
 .contacto-imagen {
     display:flex;
