@@ -89,7 +89,7 @@ main {
     justify-content: space-evenly;
     width: 100%;
     max-width: 1200px;
-    margin-bottom: 199px;
+    margin-bottom: 50px;
     position: relative;
 }
 
@@ -173,84 +173,95 @@ footer nav a {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-    padding: 40px;
-    margin: 20px auto;
+    margin: 50px auto;
     max-width: 1200px;
 }
 
 .project-card {
+    position: relative;
+    overflow: hidden;
     border-radius: 10px;
-    height: 300px;
-    width: 550px;
-    background: url()cover no-repeat;
-    
+    height: 200px; 
+    background-size: cover;
+    background-position: center;
+    bottom:auto;
 }
 
-.titulo-text {
-    width: 55%;
-    margin: 20px;
-    font-family: "Kanit", sans-serif;
-
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-.titulo-text h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    font-family: "Kanit", sans-serif;
-    font-weight: 700;
-
-
+.project-card:hover .overlay {
+    opacity: 1;
 }
 
-.titulo-text p {
-    font-size: 1rem;
-    line-height: 1.6;
-    font-family: "Kanit", sans-serif;
+.project-info {
+    color: white;
+    text-align: center;
 }
+
+.project-info h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
 /* Estilos para la página de contacto */
 
 .contacto-content {
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 1200px;
     position: relative;
-    font-family: "Kanit", sans-serif;
+    gap: 20px;
 }
 
-.contacto-text-p {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 150px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    font-family: "Kanit", sans-serif;
-    font-weight: 400;
-    font-size: 25px;
-
-}
-.contacto-text h2 {
-    font-size: 1.5rem;
-    margin: 20px;
-    font-family: "Kanit", sans-serif;
-    font-weight: 700;
-
-
-
-}
 .contacto-imagen {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 40px;
-    margin: 20px auto;
-    max-width: 1200px;
     justify-content: center;
     align-items: center;
+    
+}
+
+.contacto-text-p {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    margin: 50px;
+}
+
+.contacto-text-p p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.contacto-text-p a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contacto-text-p a:hover {
+    text-decoration: underline;
 }
 
 @keyframes scale-up {
@@ -275,4 +286,28 @@ footer nav a {
     height: 600px;
     animation: scale-up 1s forwards;
 
+}
+
+/* Estilos de texto */
+
+.titulo-text {
+    width: 55%;
+    margin: 20px;
+    font-family: "Kanit", sans-serif;
+
+}
+
+.titulo-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+
+
+}
+
+.titulo-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: "Kanit", sans-serif;
 }
