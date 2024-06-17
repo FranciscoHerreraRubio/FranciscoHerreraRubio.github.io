@@ -120,5 +120,46 @@
         <a href="./contactos.html">CONTACTO</a>
       </nav>
     </footer>
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+      </div>
+      <script>
+        // Obtener el modal
+        var modal = document.getElementById("modal");
+      
+        // Obtener el elemento de la imagen del modal
+        var modalImg = document.getElementById("modal-img");
+        var captionText = document.getElementById("caption");
+      
+        // Obtener el botón de cerrar
+        var span = document.getElementsByClassName("close")[0];
+      
+        // Añadir evento de clic a cada tarjeta de proyecto
+        var projectCards = document.getElementsByClassName("project-card");
+        for (var i = 0; i < projectCards.length; i++) {
+          projectCards[i].onclick = function() {
+            var bgImage = this.style.backgroundImage;
+            var imgUrl = bgImage.slice(5, -2).replace(/\\/g, '');
+            modal.style.display = "block";
+            modalImg.src = imgUrl;
+            captionText.innerHTML = this.getElementsByClassName("project-info")[0].getElementsByTagName("h3")[0].innerHTML;
+          }
+        }
+      
+        // Cuando se hace clic en el botón de cerrar
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+      
+        // Cuando se hace clic fuera de la imagen del modal
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>
+      
   </body>
 </html>
