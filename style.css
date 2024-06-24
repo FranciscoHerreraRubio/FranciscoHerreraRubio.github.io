@@ -326,10 +326,13 @@ footer nav a {
     .about-image-2,
     .about-text {
         width: 100%;
+        margin: 20px ;
     }
 
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .contacto-text-p {
@@ -365,6 +368,7 @@ footer nav a {
     height: 100%; 
     overflow: auto; 
     background-color: rgba(0,0,0,0.8); 
+    justify-content: center;
   }
   
   /* Imagen modal */
@@ -404,3 +408,12 @@ footer nav a {
     text-decoration: none;
     cursor: pointer;
   }  
+
+  /* Estilo para el texto descriptivo */
+.modal-description {
+    margin: 15px;
+    color: #ccc;
+    text-align: center;
+    font-size: 16px;
+  }
+  
