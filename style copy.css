@@ -263,15 +263,6 @@ footer nav a {
 .contacto-text-p a:hover {
     text-decoration: underline;
 }
-
-@keyframes scale-up {
-    from {
-        transform: scale(0.5);
-    }
-    to {
-        transform: scale(1);
-    }
-}
     
 .contacto-card {
     border-radius: 10px;

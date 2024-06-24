@@ -212,16 +212,13 @@ footer nav a {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 100%;
+    width: auto;
     max-width: 1200px;
     position: relative;
     gap: 20px;
 }
 
 .contacto-imagen {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     padding: 40px;
     justify-content: center;
     align-items: center;
@@ -246,32 +243,10 @@ footer nav a {
     text-decoration: none;
     font-weight: bold;
 }
-
-.contacto-text-p a:hover {
-    text-decoration: underline;
-}
-
-@keyframes scale-up {
-    from {
-        transform: scale(0.5);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-    
 .contacto-card {
     border-radius: 10px;
     height: 300px;
     width: 550px;
-    background: url()cover no-repeat;
-    transition: transform 1s ease-in-out;   
-}
-
-.contacto-card:hover {
-    width: 1100px;
-    height: 600px;
-    animation: scale-up 1s forwards;
 }
 
 /* Estilos de texto */
@@ -337,13 +312,22 @@ footer nav a {
     }
 
     .contacto-text-p {
-        margin: 20px;
+        width: 100%;
+        margin: 10px ;
     }
+    .contacto-imagen{
+        width: 100%;
+        margin: 10px ;
+        
+    }
+    .contacto-content{
+        flex-direction: column;
+        margin-bottom: 100px;
 
+    }
     .contacto-card {
         width: 100%;
-        height: auto;
-    }
+        }
 
     .titulo-text {
         width: 80%;
