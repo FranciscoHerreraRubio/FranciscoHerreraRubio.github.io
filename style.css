@@ -327,7 +327,7 @@ footer nav a {
     .about-image-2,
     .about-text {
         width: 100%;
-        margin: 20px ;
+        margin: 10px ;
     }
 
     .projects-grid {
@@ -359,6 +359,7 @@ footer nav a {
 
     .modal-description{
         margin: 20px;
+        margin: auto;
     }
 }
 /* Estilos para el modal */
@@ -376,15 +377,30 @@ footer nav a {
     justify-content: center;
   }
   
-  /* Imagen modal */
+/* Estilo para el modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+
+  /* Modal Content (image) */
   .modal-content {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 700px;
   }
-  
-  /* Leyenda de la imagen */
+
+  /* Caption of Modal Image */
   #caption {
     margin: auto;
     display: block;
@@ -395,8 +411,19 @@ footer nav a {
     padding: 10px 0;
     height: 50px;
   }
-  
-  /* Estilo para el botón de cerrar */
+
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+  /* The Close Button */
   .close {
     position: absolute;
     top: 15px;
@@ -406,21 +433,21 @@ footer nav a {
     font-weight: bold;
     transition: 0.3s;
   }
-  
+
   .close:hover,
   .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-  }  
+  }
 
   /* Estilo para el texto descriptivo */
 .modal-description {
     margin: auto;
+    margin: 25px;
     max-width: 700px;
     color: #ccc;
     text-align: center;
     font-size: 16px;
-    justify-items: center;
   }
   
